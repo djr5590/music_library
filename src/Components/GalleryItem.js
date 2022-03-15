@@ -12,20 +12,20 @@ function GalleryItem(props) {
     
     const detailStyle = {
         'width': '80vw',
-        'height': '20vh',
+        'height': '40vh',
         'border': '1px solid black',
         'margin': '2px',
         'backgroundImage': `url(${props.item.artworkUrl100})`,
         'backgroundRepeat': 'no-repeat',
         'backgroundSize': 'cover',
-        'color': 'yellow'
+        'color': 'red'
     }
 
     const simpleView = () => {
         return (
             <div style={simpleStyle}>
-                <h3>{props.item.trackName}</h3>
-                <h4>{props.item.collectionName}</h4>
+                <h3>{props.item.collectionName}</h3>
+                <h4>{props.item.trackName}</h4>
             </div>
         )
     }
