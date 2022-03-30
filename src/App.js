@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Gallery from './Components/Gallery'
 import SearchBar from './Components/SearchBar'
 import { DataContext } from './context/DataContext'
+import AlbumView from './Components/AlbumView'
+import ArtistView from './Components/ArtistView'
+
 
 function App() {
   let [search, setSearch] = useState('')
@@ -37,9 +41,12 @@ function App() {
       {message}
       <DataContext.Provider value={data}>
         <Gallery />
+        <AlbumView />
+        <ArtistView />
       </DataContext.Provider>
     </div>
   );
 }
 
 export default App
+
